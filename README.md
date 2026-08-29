@@ -6,12 +6,22 @@ AEGIS_IoT is a **domestic immunity appliance**, focusing on IoT devices. It cons
   - _**BIG** Lack of protection_: Today's standard technologies don't trat in the right way this kind of device, which is the main cause attackers have success in lateral movement and hacking. They remain the most hacked type of device, yet standard routers don't offer any good protection for / from them.
 # How does AEGIS_IoT work?
 AEGIS_IoT is always active and actively scanning for danger, and it bases itself on 4 pillar:
-1. IoT related threats detection: through Suricata with IoT dedicated rules + URL malicious list feed + DNS sinkhole
-2. Behavioral anomaly detection: AEGIS deetects behavior that differ from the baseline (IoT devices have a repetitive traffic, so it's easy to detect what differs from normal)
-3. Active response: Trough DNS blackout and fake ARP packets, the device is unable to communicate with everyone
-## AEGIS_IoT hardware
+1. _IoT related threats detection_: through Suricata with IoT dedicated rules + URL malicious list feed + DNS sinkhole
+2. _Behavioral anomaly detection_: AEGIS deetects behavior that differ from the baseline (IoT devices have a repetitive traffic, so it's easy to detect what differs from normal)
+3. _Context awareness_: This is what allows to reduce the number of false positives, and not block normal activities.
+4. _Active response_: Trough DNS blackout and fake ARP packets, the device is unable to communicate with everyone
+## AEGIS_IoT hardware: Why a Raspberry pi CM5?
 To realize this, an SBC is needed. The suggested one it's the **Raspberry pi CM5**. But why? 
-  - _Scalable carrier board_: The carrier board makes it possible to adapt this project to every need.
+  - _Scalable carrier board_: The carrier board makes it possible to adapt this project to every need, and makes all of this perfect from a commercial perspective too!
   - _eMMC reliability at low cost_: using the Raspberry Pi 5 would increase the cost of the project, as an SSD would be necessary. The CM5 keeps costs low, making it a valid product and scalable, for commerce.
-  - _Cortex-A76_: With 4 GB of RAM, it gives enough space to set up Suricata + Python engine + local SLM, on a home network (wich is typically small enough to be contained in 4 gb of RAM, to use this project on bigger networks, more RAM is needed)
+  - _Cortex-A76_: With 4 GB of RAM, it gives enough space to set up Suricata + Python engine + local SLM, on a home network (wich is typically small enough to be contained in 4 gb of RAM, to use this project on bigger networks, more RAM is needed). All of this, with a minimal power supply
+# What's the vision
+Today AEGIS_IoT could be defined as a _0.8 version_. It analyzes data flow, and behavioral anomalies and defends the network through a DNS mechanism. The 1.0 version, will be the one perfected for commerce. And the 2.0 will be AEGIS at its true peak. But no spoiler!
+### _Run the demo:_
+AEGIS is a great project, and it's not 100% completed, but here's a quick and little demo:
+```
+git clone https://github.com/Cico-nverfound/AEGIS_IoT.git
+cd AEGIS_IoT
+python3 demo.py
+```
 
