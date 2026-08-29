@@ -22,7 +22,7 @@ AEGIS is a great project, and it's not 100% completed. It's not finished. The on
 ```
 git clone https://github.com/Cico-nverfound/AEGIS_IoT.git
 cd AEGIS_IoT
-python3 demo.py
+python3 aegis-iot_demo.py
 ```
 PS: the demo can't contain the SLM and real attacks for obvious reason (tho Mirai truly exists and is used in real scenarios), so I wrote the explanation and inserted a simulated attack, and for time efficiency I wrote the baseline, so that you didn't had to wait for 14 days (which is the amount of days I decided to be the period of "education" of the program).
 
