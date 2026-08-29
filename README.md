@@ -1,5 +1,5 @@
 # AEGIS_IoT - New-gen defense device for home networks
-AEGIS_IoT is a **domestic immunity appliance**, focusing on IoT devices. It constantly searches for anomalies and possible danger in behavior of IoT devices. After detection, AEGIS_IoT then responds by blocking the incriminated request, and gives a simple report, understandable by everybody, through an SML.
+AEGIS_IoT is a **domestic immunity appliance**, focusing on IoT devices. It constantly searches for anomalies and possible danger in behavior of IoT devices. After detection, AEGIS_IoT then responds by blocking the incriminated request, and gives a simple report, understandable by everybody, through an SML (Qwen 2.5 1.5B Q4).
 # Why does the world need this?
   - _Botnets_: The majority of botnets today, is built on these devices.
   - _Ease of exploit_: IoT device don't receive the same amount of updates, making them the **perfect vector and entry point** for hackers.
@@ -14,14 +14,15 @@ AEGIS_IoT is always active and actively scanning for danger, and it bases itself
 To realize this, an SBC is needed. The suggested one it's the **Raspberry pi CM5**. But why? 
   - _Scalable carrier board_: The carrier board makes it possible to adapt this project to every need, and makes all of this perfect from a commercial perspective too!
   - _eMMC reliability at low cost_: using the Raspberry Pi 5 would increase the cost of the project, as an SSD would be necessary. The CM5 keeps costs low, making it a valid product and scalable, for commerce.
-  - _Cortex-A76_: With 4 GB of RAM, it gives enough space to set up Suricata + Python engine + local SLM, on a home network (wich is typically small enough to be contained in 4 gb of RAM, to use this project on bigger networks, more RAM is needed). All of this, with a minimal power supply
+  - _Cortex-A76_: With 4 GB of RAM, it gives enough space to set up Suricata + Python engine + local SLM, on a home network (which is typically small enough to be contained in 4 gb of RAM, to use this project on bigger networks, more RAM is needed). All of this, with a minimal power supply
 # What's the vision
 Today AEGIS_IoT could be defined as a _0.8 version_. It analyzes data flow, and behavioral anomalies and defends the network through a DNS mechanism. The 1.0 version, will be the one perfected for commerce. And the 2.0 will be AEGIS at its true peak. But no spoiler!
 ### _Run the demo:_
-AEGIS is a great project, and it's not 100% completed, but here's a quick and little demo:
+AEGIS is a great project, and it's not 100% completed. It's not finished. The only thing I could share, was this demo. 
 ```
 git clone https://github.com/Cico-nverfound/AEGIS_IoT.git
 cd AEGIS_IoT
 python3 demo.py
 ```
+PS: the demo can't contain the SLM and real attacks for obvious reason (tho Mirai truly exists and is used in real scenarios), so I wrote the explanation and inserted a simulated attack, and for time efficiency I wrote the baseline, so that you didn't had to wait for 14 days (which is the amount of days I decided to be the period of "education" of the program).
 
